@@ -45,6 +45,7 @@ public:
 
     struct wl_seat* seat() const { return m_seat; }
     WPEKeymap* keymap() const { return m_keymap.get(); }
+    std::pair<double, double> pointerCoords() const { return std::pair<double, double>(m_pointer.x, m_pointer.y); }
 
     void startListening();
 
